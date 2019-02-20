@@ -120,6 +120,8 @@ add_action( 'widgets_init', 'global_widgets_init' );
  * Enqueue scripts and styles.
  */
 function global_scripts() {
+	wp_enqueue_style( 'global-bootstrapcdn','https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+	wp_enqueue_style( 'global-fontawesome','https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 	wp_enqueue_style( 'global-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'global-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
