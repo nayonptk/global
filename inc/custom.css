@@ -4,14 +4,12 @@
 }
 #global{background: transparent;border: none;font-size: 14px;font-family: 'Roboto', sans-serif;font-weight: 500;color: #fff;margin-right: 35px;margin-top: 13px;}
 .header-area {
+	background: gray;
 }
 
 .header {
 	padding-top: 50px;
-	background-image: url("../img/global_media.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	padding-bottom: 50px;
 }
 
 .header-logo-name {
@@ -77,7 +75,7 @@
 	margin-bottom: 0;
 }
 .header-signup h5 a{text-decoration: none;color: #282828;}
-.full-marketing{margin-top: 170px;padding-bottom: 350px;}
+.full-marketing{padding-bottom: 350px;background-image: url("../img/global_media.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding-top: 270px;}
 .market-title {
 	text-align: center;
 }
@@ -481,3 +479,4 @@
 
 .footer_buttom-icon {
 }
+.header_fix{position:absolute;top: 0;left: 0;width: 100%;background: transparent;}

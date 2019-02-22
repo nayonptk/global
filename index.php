@@ -15,6 +15,30 @@
 get_header();
 ?>
 
+	<!--online marketing -->
+
+		<div class="full-marketing"> 
+			<div class="container">
+				<div class="market-title"> 
+					<h1><?php echo $redux_demo['market-Title']; ?></h1>
+				</div>
+				<div class="online-market-signup"> 
+					<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a>
+				</div>
+			</div>
+
+		</div>
+		<!--online marketing /-->
+
+
+
+
+
+
+
+
+
+
 <section class="service-area"> 
 	<div class="service"> 
 		<div class="container"> 

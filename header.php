@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header-area"> 
+<header class="header-area <?php if(is_front_page() || is_home()) { echo "header_fix";} ?>"> 
 	<div class="header">
 		<!--header-menu-area -->
 		<div class="container">
@@ -66,21 +66,5 @@
 			</div>
 		</div>
 		<!--header-menu-area /-->
-		<!--online marketing -->
-
-		<div class="full-marketing"> 
-			<div class="container">
-				<div class="market-title"> 
-					<h1><?php echo $redux_demo['market-Title']; ?></h1>
-				</div>
-				<div class="online-market-signup"> 
-					<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a>
-				</div>
-			</div>
-
-		</div>
-
-
-		<!--online marketing /-->
 	</div>
 </header>
