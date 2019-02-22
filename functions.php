@@ -47,6 +47,32 @@ if ( ! function_exists( 'global_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'global' ),
 		) );
 
+		register_nav_menus( array(
+			'Main-menu' => esc_html__( 'Main-menu', 'global' ),
+		) );
+
+
+		register_post_type('service-post',array(
+			$global =  array(
+				'name'	=> 'service-post',
+				'singular_name'	=> 'fornt page service',
+				'add_new'	=> 'add page service',
+				'add_new_item'	=> 'add new service',
+				'view_item'	=> 'view service',
+			),
+			'public' => true,
+			'labels'	=>	$global,
+			'menu_icon' => 'dashicons-welcome-learn-more',
+			'supports'           => array( 'title','editor', 'custom-fields','thumbnail', 'comments')
+		));	
+
+
+
+
+
+
+
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -155,6 +181,17 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+/**
+ * Redux Framework 
+ */
+require get_template_directory() . '/redux/ReduxCore/framework.php';
+
+require get_template_directory() . '/redux/sample/sample-config.php';
+
+require get_template_directory() . '/cmb2/cmb2.php';
+
+
+
 
 /**
  * Load Jetpack compatibility file.

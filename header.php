@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+	<?php wp_head(); global $redux_demo; ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,10 +31,10 @@
 				<div class="col-xl-3">
 					<div class="header-logo-name"> 
 						<div class="header-logo"> 
-							<a href=""><img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt=""></a>
+							<a href="<?php echo esc_url(site_url());?>"><img src="<?php echo $redux_demo['main_logo']['url'];?>" alt=""></a>
 						</div>
 						<div class="header-logo-name"> 
-							<h4>Global Media</h4>
+							<h4><?php echo $redux_demo['logo-name']; ?></h4>
 						</div>
 					</div>
 				</div>
@@ -42,14 +42,10 @@
 					<!--header-menu-->			
 				<div class="col-xl-6 p-0">
 					<div class="header-menu"> 
-						<ul>
-							<li><a href="">Adventures</a></li>
-							<li><a href="">Publishers</a></li>
-							<li><a href="">Agenciens</a></li>
-							<li><a href="">Company</a></li>
-							<li><a href="">Our Parthners</a></li>
-							<li><a href="">Contact</a></li>
-						</ul>
+						<?php wp_nav_menu(array( 
+							'theme_location'	=> "Main-menu",
+
+						)); ?>
 					</div>
 				</div>
 				<!--header-menu/-->
@@ -62,7 +58,7 @@
 							</select>
 						</div>
 						<div class="header-signup"> 
-							<h5><a href="">Sign Up</a></h5>
+							<h5><a href="<?php echo esc_url(site_url()); ?>/wp-login.php?action=register">Sign Up</a></h5>
 						</div>
 					</div>
 				</div>
@@ -75,10 +71,10 @@
 		<div class="full-marketing"> 
 			<div class="container">
 				<div class="market-title"> 
-					<h1>Global agency online marketing</h1>
+					<h1><?php echo $redux_demo['market-Title']; ?></h1>
 				</div>
 				<div class="online-market-signup"> 
-					<a href="">Sign Up right now</a>
+					<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a>
 				</div>
 			</div>
 

@@ -19,60 +19,38 @@ get_header();
 	<div class="service"> 
 		<div class="container"> 
 			<div class="row">
+				
+	 <?php $service = new WP_Query(array( 
+	          	'post_type' => 'service-post',
+	            'posts_per_page' => 3,
+	  ));?>  
+	  <?php if($service->have_posts()) : while($service->have_posts()) : $service->the_post(); 
+	        $service_link_text    = get_post_meta(get_the_id(),'service-link-text', true ); 
+	        $service_link         = get_post_meta(get_the_id(),'service-link', true );
+     ?>
+
 				<!--single service-->
 				<div class="col-xl-4"> 
 					<div class="Advertisers-service">
 						<div class="Advertisers-title"> 
-							<h3>Advertisers</h3>
+							<h3><?php echo the_title(); ?></h3>
 						</div>
 						<div class="Advertisers-content"> 
-							<p>That can be definitely said about the contemporary travel websites. </p>
+							<p><?php echo wp_trim_words(get_the_content(),30,NULL); ?></p>
 						</div>
 						<div class="Advertisers-Join"> 
 							<a href="">Join Now</a>
 						</div>
 						<div class="Advertisers-more"> 
-							<a href="">Read More</a>
+							<a href="<?php echo the_permalink(); ?>">Read More</a>
 						</div>
 					</div>	
 				</div>
 				<!--single service /-->
-				<!--single service-->
-				<div class="col-xl-4"> 
-					<div class="Advertisers-service">
-						<div class="Advertisers-title"> 
-							<h3>Publishers</h3>
-						</div>
-						<div class="Advertisers-content"> 
-							<p>That can be definitely said about the contemporary travel websites. </p>
-						</div>
-						<div class="Advertisers-Join"> 
-							<a href="">Join Now</a>
-						</div>
-						<div class="Advertisers-more"> 
-							<a href="">Read More</a>
-						</div>
-					</div>	
-				</div>
-				<!--single service /-->
-				<!--single service-->
-				<div class="col-xl-4"> 
-					<div class="Advertisers-service">
-						<div class="Advertisers-title"> 
-							<h3>Agencies</h3>
-						</div>
-						<div class="Advertisers-content"> 
-							<p>That can be definitely said about the contemporary travel websites. </p>
-						</div>
-						<div class="Advertisers-Join"> 
-							<a href="">Join Now</a>
-						</div>
-						<div class="Advertisers-more"> 
-							<a href="">Read More</a>
-						</div>
-					</div>	
-				</div>
-				<!--single service /-->
+   <?php  endwhile; endif; ?>  
+
+
+
 			</div>
 		</div>
 	</div>
@@ -142,49 +120,49 @@ get_header();
 	<div class="working"> 
 		<div class="container"> 
 			<div class="working-title"> 
-				<h1>How we are working?</h1>
-				<p>That can be definitely said about the contemporary travel websites. </p>
+				<h1><?php echo $redux_demo['working-title']; ?></h1>
+				<p><?php echo $redux_demo['working-subtitle']; ?></p>
 			</div>
 			<div class="row"> 
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>CPI</h5>
+						<h5><?php echo $redux_demo['working-one']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>CPA</h5>
+						<h5><?php echo $redux_demo['working-two']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>CPR</h5>
+						<h5><?php echo $redux_demo['working-three']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>CPC</h5>
+						<h5><?php echo $redux_demo['working-fore']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>CPM</h5>
+						<h5><?php echo $redux_demo['working-five']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
 				<!--single-working-->
 				<div class="col-xl-2"> 
 					<div class="single-working"> 
-						<h5>RSM</h5>
+						<h5><?php echo $redux_demo['working-six']; ?></h5>
 					</div>
 				</div>
 				<!--single-working-->
@@ -317,12 +295,12 @@ get_header();
 		<div class="container"> 
 			<div class="row"> 
 				<div class="publishers-title"> 
-					<h1>publishers</h1>
-					<p>hat can be definitely said about the contemporary travel websites. Whether it is an page for a local hotel or a feature-heavy portal that belongs to big holiday company, it fantastic interfaces are user magnets.</p>
+					<h1><?php echo $redux_demo['pub-title'];?></h1>
+					<p><?php echo $redux_demo['pub-content'];?></p>
 				</div>
 				<div class="publishers-popup"> 
 					<div class="popup"> 
-						<a href=""><i class="far fa-play-circle"></i></a>
+						<a href="<?php echo $redux_demo['pub-link'];?>"><i class="far fa-play-circle"></i></a>
 					</div>
 				</div>
 			</div>
