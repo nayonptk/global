@@ -64,6 +64,21 @@ if ( ! function_exists( 'global_setup' ) ) :
 			'labels'	=>	$global,
 			'menu_icon' => 'dashicons-welcome-learn-more',
 			'supports'           => array( 'title','editor', 'custom-fields','thumbnail', 'comments')
+		));
+
+			
+		register_post_type('Agencies-post',array(
+			$Agencies =  array(
+				'name'	=> 'Agencies-post',
+				'singular_name'	=> 'fornt page Agencies',
+				'add_new'	=> 'add page Agencies',
+				'add_new_item'	=> 'add new Agencies',
+				'view_item'	=> 'view Agencies',
+			),
+			'public' => true,
+			'labels'	=>	$Agencies,
+			'menu_icon' => 'dashicons-welcome-learn-more',
+			'supports'           => array( 'title','editor', 'custom-fields','thumbnail', 'comments')
 		));	
 
 
@@ -146,15 +161,21 @@ add_action( 'widgets_init', 'global_widgets_init' );
  * Enqueue scripts and styles.
  */
 function global_scripts() {
-	wp_enqueue_style( 'global-bootstrapcdn','https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+
 	wp_enqueue_style( 'global-fontawesome','https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 	wp_enqueue_style( 'global-googlefont','https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/inc/bootstrap.min.css' );
+	wp_enqueue_style( 'magnific-style', get_template_directory_uri() . '/inc/magnific-popup.css' );
+	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/inc/lightslider.css' );
 	wp_enqueue_style( 'fair-main-stylesheet', get_template_directory_uri() . '/inc/custom.css' );
 	wp_enqueue_style( 'global-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'global-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'magnific-popup-js', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'),1.0, true );
+	wp_enqueue_script( 'lightslider-js', get_template_directory_uri() . '/js/lightslider.js', array('jquery'),1.0, true );
+	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'),1.0, true );
 	wp_enqueue_script( 'global-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() .'/js/custom.js', array('jquery'),1.0, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

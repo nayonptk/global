@@ -2,6 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
+
+
+.slidelink li a
+
+
+
+
+
 #global{background: transparent;border: none;font-size: 14px;font-family: 'Roboto', sans-serif;font-weight: 500;color: #fff;margin-right: 35px;margin-top: 13px;}
 .header-area {
 	background: gray;
@@ -61,6 +69,8 @@
 .header-lang {
 	display: inline-block;
 	float: left;
+	margin-top: 11px;
+	margin-right: 30px;
 }
 
 .header-signup {
@@ -232,7 +242,7 @@
 }
 
 .Advertisers-left {
-	padding-top: 370px;
+	padding-top: 282px;
 }
 
 .Advertisers-title-content {
@@ -270,6 +280,7 @@
 .mobile img{
 	width: 415px;
 	margin-top: 115px;
+	margin-bottom: 65px;
 }
 .Agencies-area {
 }
@@ -319,7 +330,7 @@
 
 .single-Agencies-content {
 	display: block;
-	margin-left: 59px;
+	margin-left: 30px;
 }
 .single-Agencies-content p{
 	color: #767676;
@@ -480,3 +491,7 @@
 .footer_buttom-icon {
 }
 .header_fix{position:absolute;top: 0;left: 0;width: 100%;background: transparent;}
+.custom-cat-style{margin-top: 50px;}
+
+.fix{position:fixed;top:0;left:0;width:100%;background: #f3a032;z-index: 999;}
+

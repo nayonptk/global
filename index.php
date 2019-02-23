@@ -20,24 +20,23 @@ get_header();
 		<div class="full-marketing"> 
 			<div class="container">
 				<div class="market-title"> 
-					<h1><?php echo $redux_demo['market-Title']; ?></h1>
+
+					<ul id="lightSlider" class="slidelink">
+						<li><h1><?php echo $redux_demo['market-Title']; ?></h1>
+						<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a></li>
+
+						<li><h1><?php echo $redux_demo['market-Title']; ?></h1>
+						<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a></li>
+
+					</ul>
 				</div>
-				<div class="online-market-signup"> 
-					<a href="<?php echo $redux_demo['market-link']; ?>"><?php echo $redux_demo['market-link-text']; ?></a>
-				</div>
+				 
+					
+				
 			</div>
 
 		</div>
 		<!--online marketing /-->
-
-
-
-
-
-
-
-
-
 
 <section class="service-area"> 
 	<div class="service"> 
@@ -83,18 +82,23 @@ get_header();
 	<div class="Why-we">
 		<div class="container"> 
 			<div class="Why-we-title"> 
-				<h1>Why we?</h1>
-				<p>That can be definitely said about the contemporary travel websites. </p>
+				<h1><?php echo $redux_demo['Why-we-Title']; ?></h1>
+				<p><?php echo $redux_demo['Why-We-content']; ?></p>
 			</div> 		
 			<div class="row"> 
 				<!--single-why-we-->
 				<div class="col-xl-3"> 
 					<div class="single-why-we">
 						<div class="single-we-icon"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php if(!empty($redux_demo['Why-one-icon']['url'])) : ?>
+								<img src="<?php echo $redux_demo['Why-one-icon']['url'];?>" alt="">
+							<?php else :?>
+								<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php endif; ?>
 						</div>
+
 						<div class="single-we-content">
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
+							<p><?php echo $redux_demo['Why-We-one']; ?></p>
 						</div>
 					</div>
 				</div>
@@ -103,10 +107,14 @@ get_header();
 				<div class="col-xl-3"> 
 					<div class="single-why-we">
 						<div class="single-we-icon"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php if(!empty($redux_demo['Why-two-icon']['url'])) : ?>
+								<img src="<?php echo $redux_demo['Why-two-icon']['url'];?>" alt="">
+							<?php else :?>
+								<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="single-we-content">
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
+							<p><?php echo $redux_demo['Why-We-two']; ?></p>
 						</div>
 					</div>
 				</div>
@@ -115,10 +123,14 @@ get_header();
 				<div class="col-xl-3"> 
 					<div class="single-why-we">
 						<div class="single-we-icon"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php if(!empty($redux_demo['Why-three-icon']['url'])) : ?>
+								<img src="<?php echo $redux_demo['Why-three-icon']['url'];?>" alt="">
+							<?php else :?>
+								<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="single-we-content">
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
+							<p><?php echo $redux_demo['Why-We-three']; ?></p>
 						</div>
 					</div>
 				</div>
@@ -127,10 +139,14 @@ get_header();
 				<div class="col-xl-3"> 
 					<div class="single-why-we">
 						<div class="single-we-icon"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php if(!empty($redux_demo['Why-four-icon']['url'])) : ?>
+								<img src="<?php echo $redux_demo['Why-four-icon']['url'];?>" alt="">
+							<?php else :?>
+								<img src="<?php echo get_template_directory_uri();?>/img/global_logo.png" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="single-we-content">
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
+							<p><?php echo $redux_demo['Why-We-four']; ?></p>
 						</div>
 					</div>
 				</div>
@@ -201,9 +217,9 @@ get_header();
 				<div class="col-xl-6"> 
 					<div class="Advertisers-left">
 						<div class="Advertisers-title-content"> 
-							<h1>Advertisers</h1>
-							<p>hat can be definitely said about the contemporary travel websites. Whether it is an page for a local hotel or a feature-heavy portal that belongs to big holiday company, it fantastic interfaces are user magnets.</p>
-							<h5><a href="">Read more</a></h5>
+							<h1><?php echo $redux_demo['Advertisers-Title']; ?></h1>
+							<p><?php echo $redux_demo['Advertisers-content']; ?></p>
+							<h5><a href="<?php echo $redux_demo['Advertisers-link']; ?>">Read more</a></h5>
 						</div>
 						<div class="Advertisers-app"> 
 							<div class="single-Advertisers-app"> 
@@ -237,78 +253,36 @@ get_header();
 					<p>Typography is an art combining perspective, technique and ingenuity. A great design comes with great typography. </p>
 				</div>
 			</div>
+
+
 			<div class="row">
 				<!--single-row-->
+
+				<?php $Agencies = new WP_Query(array( 
+
+					'post_type'	=> 'Agencies-post',
+					'posts_per_page'	=> -1,
+
+
+				));?>
+				<?php while($Agencies->have_posts()) : $Agencies->the_post(); ?>
+
 				<div class="col-xl-6">
 					<div class="single-Agencies"> 
 						<div class="single-Agencies-icon"> 
 							<i class="fas fa-check"></i>
 						</div>
 						<div class="single-Agencies-content"> 
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
+							<?php echo the_content(); ?>
 						</div>
 					</div> 
 				</div>
-				<div class="col-xl-6">
-					<div class="single-Agencies"> 
-						<div class="single-Agencies-icon"> 
-							<i class="fas fa-check"></i>
-						</div>
-						<div class="single-Agencies-content"> 
-							<p>I won’t surprise if we tell you that European e-commerce market is hot and that a mobile-friendly website is a key to success in that field. Last year, approximately 296 million online shoppers spent over 455 billion euros.</p>
-						</div>
-					</div> 
-				</div>
+
+				<?php endwhile; ?>
+
 					<!--single-row /-->
 			</div>
-			<div class="row">
-				<!--single-row-->
-				<div class="col-xl-6">
-					<div class="single-Agencies"> 
-						<div class="single-Agencies-icon"> 
-							<i class="fas fa-check"></i>
-						</div>
-						<div class="single-Agencies-content"> 
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
-						</div>
-					</div> 
-				</div>
-				<div class="col-xl-6">
-					<div class="single-Agencies"> 
-						<div class="single-Agencies-icon"> 
-							<i class="fas fa-check"></i>
-						</div>
-						<div class="single-Agencies-content"> 
-							<p>I won’t surprise if we tell you that European e-commerce market is hot and that a mobile-friendly website is a key to success in that field. Last year, approximately 296 million online shoppers spent over 455 billion euros.</p>
-						</div>
-					</div> 
-				</div>
-					<!--single-row /-->
-			</div>
-			<div class="row">
-				<!--single-row-->
-				<div class="col-xl-6">
-					<div class="single-Agencies"> 
-						<div class="single-Agencies-icon"> 
-							<i class="fas fa-check"></i>
-						</div>
-						<div class="single-Agencies-content"> 
-							<p>As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,</p>
-						</div>
-					</div> 
-				</div>
-				<div class="col-xl-6">
-					<div class="single-Agencies"> 
-						<div class="single-Agencies-icon"> 
-							<i class="fas fa-check"></i>
-						</div>
-						<div class="single-Agencies-content"> 
-							<p>I won’t surprise if we tell you that European e-commerce market is hot and that a mobile-friendly website is a key to success in that field. Last year, approximately 296 million online shoppers spent over 455 billion euros.</p>
-						</div>
-					</div> 
-				</div>
-					<!--single-row /-->
-			</div>			
+
 
 
 		</div>
@@ -324,7 +298,9 @@ get_header();
 				</div>
 				<div class="publishers-popup"> 
 					<div class="popup"> 
-						<a href="<?php echo $redux_demo['pub-link'];?>"><i class="far fa-play-circle"></i></a>
+
+						<a class="video-view" href="https://www.youtube.com/watch?v=oA03cLkNEsg"> <i class="far fa-play-circle"></i> </a>
+						
 					</div>
 				</div>
 			</div>
@@ -336,10 +312,10 @@ get_header();
 		<div class="container"> 
 			<div class="fact-about"> 
 				<div class="about-title"> 
-					<h1>Fact about us</h1>
+					<h1><?php echo $redux_demo['about-title']; ?></h1>
 				</div>
 				<div class="about-content"> 
-					<p>Whether you are creating for web or print, designing brochures or user interfaces, developing a brand identity or creating a logo, one of the key elements of a successful project is the typeface you are using. </p>
+					<p><?php echo $redux_demo['about-content']; ?></p>
 				</div>
 			</div>
 			<div class="row"> 
@@ -347,10 +323,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon1.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-one']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>Tips for Creating a Great Personal </p>
+							<p><?php echo $redux_demo['about-title-one'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -360,10 +336,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon2.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-two']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>How to Create Checkout Form Using HTML </p>
+							<p><?php echo $redux_demo['about-title-two'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -373,10 +349,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon3.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-three']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>WebAssembly Now in Browser Preview Mode</p>
+							<p><?php echo $redux_demo['about-title-three'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -386,10 +362,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon4.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-four']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>Adobe Introduces Project Felix, Sensei</p>
+							<p><?php echo $redux_demo['about-title-four'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -399,10 +375,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon5.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-five']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>A Design Workflow Comparison</p>
+							<p><?php echo $redux_demo['about-title-five'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -412,10 +388,10 @@ get_header();
 				<div class="col-xl-2"> 
 					<div class="single-fact"> 
 						<div class="single-fact-img"> 
-							<img src="<?php echo get_template_directory_uri();?>/img/global_media_icon6.png" alt="">
+							<img src="<?php echo $redux_demo['about-icon-six']['url'];?>" alt="">
 						</div>
 						<div class="single-fact-content"> 
-							<p>Top 5 Underutilized Web Performance </p>
+							<p><?php echo $redux_demo['about-title-six'];?></p>
 						</div>
 						<div class="hover-border"></div>
 					</div>
@@ -430,26 +406,26 @@ get_header();
 		<div class="container"> 
 				<div class="social-info">
 					<div class="social-name"> 
-						<p>Phone:</p>
+						<p><?php echo $redux_demo['social-phone']; ?></p>
 					</div>
 					<div class="social-account"> 
-						<h1> +38 (098) 483 61 77 </h1>
+						<h1> <?php echo $redux_demo['social-number']; ?> </h1>
 					</div>
 				</div>	
 				<div class="social-info">
 					<div class="social-name"> 
-						<p>Email:</p>
+						<p><?php echo $redux_demo['social-email']; ?></p>
 					</div>
 					<div class="social-account"> 
-						<h1>info@globalmedia.com</h1>
+						<h1><?php echo $redux_demo['social-email-id']; ?></h1>
 					</div>
 				</div>
 				<div class="social-info">
 					<div class="social-name"> 
-						<p>Skype:</p>
+						<p><?php echo $redux_demo['social-skype']; ?></p>
 					</div>
 					<div class="social-account"> 
-						<h1>globalmedia</h1>
+						<h1><?php echo $redux_demo['social-skype-id']; ?></h1>
 					</div>
 				</div>				
 		</div>

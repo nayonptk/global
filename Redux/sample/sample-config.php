@@ -295,6 +295,98 @@
     ),
  ));
 
+
+ Redux::setSection($opt_name, array( 
+
+    'title'         =>__('Why we','global'),
+    'id'            => 'Why-we',
+    'icon'          => 'dashicons dashicons-admin-links',
+    'fields'        => array(
+            array(
+                'title' => __('Why We Title','global'),
+                'id'    => 'Why-we-Title',
+                'type'  => 'text',
+                'default'   => __('Why we?','global'),
+             
+            ),
+          array(
+                'title' => __('Why-We-content','global'),
+                'id'    => 'Why-We-content',
+                'type'  => 'text',
+                'default'   => __('That can be definitely said about the contemporary travel websites. ','global'),
+             
+            ),
+            array(
+                'title' => __('Why-one-icon','fair'),
+                'id'    => 'Why-one-icon',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+          array(
+                'title' => __('Why-We-one','global'),
+                'id'    => 'Why-We-one',
+                'type'  => 'text',
+                'default'   => __('As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,','global'),
+             
+            ), 
+            array(
+                'title' => __('Why-two-icon','fair'),
+                'id'    => 'Why-two-icon',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+          array(
+                'title' => __('Why-We-two','global'),
+                'id'    => 'Why-We-two',
+                'type'  => 'text',
+                'default'   => __('As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,','global'),
+             
+            ), 
+            array(
+                'title' => __('Why-three-icon','fair'),
+                'id'    => 'Why-three-icon',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+          array(
+                'title' => __('Why-We-three','global'),
+                'id'    => 'Why-We-three',
+                'type'  => 'text',
+                'default'   => __('As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,','global'),
+             
+            ), 
+            array(
+                'title' => __('Why-four-icon','fair'),
+                'id'    => 'Why-four-icon',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+          array(
+                'title' => __('Why-We-four','global'),
+                'id'    => 'Why-We-four',
+                'type'  => 'text',
+                'default'   => __('As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be more unfinished business to take care of than usual. And deadlines, which should always be met anyway,','global'),
+             
+            ),        
+    ),
+ ));
+
+
+
+
+
  Redux::setSection($opt_name, array( 
 
     'title'         =>__('How we are working','global'),
@@ -353,6 +445,43 @@
     ),
  ));
 
+
+
+ Redux::setSection($opt_name, array( 
+
+    'title'         =>__('Advertisers','global'),
+    'id'            => 'Advertisers',
+    'icon'          => 'dashicons dashicons-admin-links',
+    'fields'        => array(
+            array(
+                'title' => __('Advertisers-Title','global'),
+                'id'    => 'Advertisers-Title',
+                'type'  => 'text',
+                'default'   => __('Advertisers','global'),
+             
+            ),
+          array(
+                'title' => __('Advertisers-content','global'),
+                'id'    => 'Advertisers-content',
+                'type'  => 'text',
+                'default'   => __('hat can be definitely said about the contemporary travel websites. Whether it is an page for a local hotel or a feature-heavy portal that belongs to big holiday company, it fantastic interfaces are user magnets.','global'),
+             
+            ),
+          array(
+                'title' => __('Advertisers-link','global'),
+                'id'    => 'Advertisers-link',
+                'type'  => 'text',
+                'url'       => true,
+                'default'   => __('google.com','global'),
+             
+            ),        
+    ),
+ ));
+
+
+
+
+
  Redux::setSection($opt_name, array( 
 
     'title'         =>__('publishers','global'),
@@ -383,6 +512,199 @@
     ),
  ));
 
+
+
+
+ Redux::setSection($opt_name, array( 
+
+    'title'         =>__('about us','global'),
+    'id'            => 'about-us-area',
+    'icon'          => 'dashicons dashicons-admin-users',
+    'fields'        => array(
+            array(
+                'title' => __('about us title','global'),
+                'id'    => 'about-title',
+                'type'  => 'text',
+                'default'   => __('Fact about us','global'),
+
+            ),
+          array(
+                'title' => __('about-content','global'),
+                'id'    => 'about-content',
+                'type'  => 'text',
+                'default'   => __('Whether you are creating for web or print, designing brochures or user interfaces, developing a brand identity or creating a logo, one of the key elements of a successful project is the typeface you are using. ','global'),
+             
+            ),      
+              array(
+                'title' => __('about-icon-one','fair'),
+                'id'    => 'about-icon-one',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-one','global'),
+                'id'    => 'about-title-one',
+                'type'  => 'text',
+                'default'   => __('Tips for Creating a Great Personal ','global'),
+
+            ),     
+              array(
+                'title' => __('about-icon-two','fair'),
+                'id'    => 'about-icon-two',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-two','global'),
+                'id'    => 'about-title-two',
+                'type'  => 'text',
+                'default'   => __('How to Create Checkout Form Using HTML ','global'),
+
+            ),      
+              array(
+                'title' => __('about-icon-three','fair'),
+                'id'    => 'about-icon-three',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-three','global'),
+                'id'    => 'about-title-three',
+                'type'  => 'text',
+                'default'   => __('WebAssembly Now in Browser Preview Mode','global'),
+
+            ),     
+              array(
+                'title' => __('about-icon-four','fair'),
+                'id'    => 'about-icon-four',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-four','global'),
+                'id'    => 'about-title-four',
+                'type'  => 'text',
+                'default'   => __('Adobe Introduces Project Felix, Sensei','global'),
+
+            ),      
+              array(
+                'title' => __('about-icon-five','fair'),
+                'id'    => 'about-icon-five',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-five','global'),
+                'id'    => 'about-title-five',
+                'type'  => 'text',
+                'default'   => __('A Design Workflow Comparison','global'),
+
+            ),     
+              array(
+                'title' => __('about-icon-six','fair'),
+                'id'    => 'about-icon-six',
+                'type'  => 'media',
+                'url'       => true,
+                 'compiler'  => 'false',
+             
+            ),
+
+             array(
+                'title' => __('about-title-six','global'),
+                'id'    => 'about-title-six',
+                'type'  => 'text',
+                'default'   => __('Top 5 Underutilized Web Performance ','global'),
+
+            ),
+
+
+
+    ),
+ ));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Redux::setSection($opt_name, array( 
+
+    'title'         =>__('SOCIAL','global'),
+    'id'            => 'social-area',
+    'icon'          => 'dashicons dashicons-admin-users',
+    'fields'        => array(
+            array(
+                'title' => __('social phone','global'),
+                'id'    => 'social-phone',
+                'type'  => 'text',
+                'default'   => __('phone:','global'),
+
+            ),
+          array(
+                'title' => __('social-phone-number','global'),
+                'id'    => 'social-number',
+                'type'  => 'text',
+                'default'   => __('+38 (098) 483 61 77 ','global'),
+             
+            ),
+            array(
+                'title' => __('social Email','global'),
+                'id'    => 'social-email',
+                'type'  => 'text',
+                'default'   => __('email:','global'),
+
+            ),
+            array(
+                'title' => __('social Email Name','global'),
+                'id'    => 'social-email-id',
+                'type'  => 'text',
+                'default'   => __('info@globalmedia.com','global'),
+
+            ),
+
+          array(
+                'title' => __('social-Skype','global'),
+                'id'    => 'social-skype',
+                'type'  => 'text',
+                'default'   => __('Skype:','global'),
+             
+            ),
+            array(
+                'title' => __('social Skype Name','global'),
+                'id'    => 'social-skype-id',
+                'type'  => 'text',
+                'default'   => __('globalmedia','global'),
+
+            ),
+    ),
+ ));
 
 
 
